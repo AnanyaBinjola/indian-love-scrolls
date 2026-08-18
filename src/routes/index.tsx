@@ -156,25 +156,32 @@ function Home() {
         </div>
       </section>
 
-      {/* ---------- 7. FINAL CTA ---------- */}
-      <section className="relative overflow-hidden bg-indigo text-parchment ink-grain">
-        <PatternBackground motif="damask" color="ivory" opacity={0.07} />
-        <div className="relative mx-auto max-w-4xl px-8 py-24 text-center">
-          <DecorativeBorder tone="light" />
-          <div className="relative">
-            <PaisleyMark className="mx-auto text-gold" />
-            <h2 className="mx-auto mt-6 max-w-2xl text-balance text-3xl leading-[1.3] text-parchment sm:text-4xl">
-              Some stories are carved in stone.
-              <br />
-              Others survive because we keep telling them.
-            </h2>
-            <div className="mt-10">
-              <Link
-                to="/stories"
-                className="inline-block border border-gold/70 bg-gold/15 px-9 py-3.5 meta-label text-parchment transition-colors hover:bg-gold/30"
-              >
-                Explore All Stories →
-              </Link>
+      {/* ---------- 7. HERO QUOTE BOX ---------- */}
+      <section className="relative bg-parchment paper-grain py-16 sm:py-24">
+        <PatternBackground motif="damask" opacity={0.04} />
+        <div className="relative mx-auto max-w-4xl px-6">
+          <div className="relative overflow-hidden border border-gold/60 bg-oxblood p-10 text-center text-parchment ink-grain shadow-[var(--shadow-raised)] sm:p-16">
+            <PatternBackground motif="damask" color="ivory" opacity={0.09} />
+            <DecorativeBorder />
+            <div className="relative mx-auto max-w-2xl">
+              <div className="flex items-center justify-center gap-3">
+                <LotusMark className="text-gold" />
+                <p className="eyebrow text-sand/75">Memory & Monument</p>
+                <LotusMark className="text-gold" />
+              </div>
+              <h2 className="mx-auto mt-6 max-w-2xl text-balance font-display text-3xl leading-[1.3] text-parchment sm:text-4xl">
+                Some stories are carved in stone.
+                <br />
+                Others survive because we keep telling them.
+              </h2>
+              <div className="mt-10">
+                <Link
+                  to="/stories"
+                  className="inline-block border border-gold/70 bg-gold/15 px-9 py-3.5 meta-label text-parchment transition-colors hover:bg-gold/30"
+                >
+                  Explore All Stories →
+                </Link>
+              </div>
             </div>
           </div>
         </div>

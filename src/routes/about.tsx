@@ -31,7 +31,7 @@ function AboutPage() {
         title="A Human Values project about how India remembers love"
         intro="Eight stories, traced from royal chronicles, epics and folk ballads — and honest about the distance between them."
         motif="jali"
-        tone="indigo"
+        tone="oxblood"
       />
 
       <section className="relative bg-parchment paper-grain">
