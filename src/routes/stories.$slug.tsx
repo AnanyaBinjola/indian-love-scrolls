@@ -33,4 +33,3 @@ function StoryPage() {
   return <StoryTemplate story={story} />;
 }
 
-export const allStorySlugs = stories.map((s) => s.slug);
