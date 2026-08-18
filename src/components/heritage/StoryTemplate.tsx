@@ -17,8 +17,8 @@ const placeholderTimeline = (story: Story): TimelineItem[] => [
 
 export function StoryTemplate({ story }: { story: Story }) {
   const index = stories.findIndex((s) => s.slug === story.slug);
-  const prev = stories[(index - 1 + stories.length) % stories.length];
-  const next = stories[(index + 1) % stories.length];
+  const prev = stories[(index - 1 + stories.length) % stories.length]!;
+  const next = stories[(index + 1) % stories.length]!;
 
   return (
     <article>
