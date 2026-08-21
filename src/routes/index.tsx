@@ -14,13 +14,13 @@ import { StoryGrid } from "@/components/heritage/StoryGrid";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Love, Remembered — Eight Indian Love Stories" },
+      { title: "Historical Stories of Love — Eight Indian Love Stories" },
       {
         name: "description",
         content:
           "Eight love stories across Indian history and legend, from Agra to Assam to Tamil Nadu — with the history hiding underneath each one.",
       },
-      { property: "og:title", content: "Love, Remembered — Eight Indian Love Stories" },
+      { property: "og:title", content: "Historical Stories of Love — Eight Indian Love Stories" },
       {
         property: "og:description",
         content:

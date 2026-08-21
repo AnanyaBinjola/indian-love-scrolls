@@ -76,13 +76,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Love, Remembered — Historical Love Stories of India" },
+      { title: "Historical Stories of Love — Indian History & Legend" },
       {
         name: "description",
         content:
           "Eight enduring love stories from Indian history and legend, each marked for how much is documented and how much is folklore.",
       },
-      { name: "author", content: "Love, Remembered" },
+      { name: "author", content: "Historical Stories of Love" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

@@ -7,13 +7,13 @@ import { PatternBackground } from "@/components/heritage/PatternBackground";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About This Project — Love, Remembered" },
+      { title: "About This Project — Historical Stories of Love" },
       {
         name: "description",
         content:
           "How this Human Values project was researched: eight Indian love stories, each marked for how much is documented history and how much is legend.",
       },
-      { property: "og:title", content: "About This Project — Love, Remembered" },
+      { property: "og:title", content: "About This Project — Historical Stories of Love" },
       {
         property: "og:description",
         content: "How eight Indian love stories were selected, researched and rated for accuracy.",

@@ -21,8 +21,8 @@ export function Navbar() {
         <Link to="/" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
           <LotusMark className="text-gold" />
           <span className="leading-tight">
-            <span className="block font-display text-[0.95rem] tracking-[0.22em] text-parchment">
-              LOVE, REMEMBERED
+            <span className="block font-display text-[0.78rem] tracking-[0.16em] text-parchment sm:text-[0.9rem] sm:tracking-[0.20em]">
+              HISTORICAL STORIES OF LOVE
             </span>
             <span className="block meta-label text-[0.6rem] text-sand/60">
               Eight Stories Across Indian History &amp; Legend

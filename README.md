@@ -1,4 +1,4 @@
-# Indian Love Scrolls
+# Historical Stories of Love
 
 Build Brief — Historical Love Stories of India
 
@@ -348,7 +348,7 @@ preserve the same visual identity
 
 Possible site title:
 
-LOVE, REMEMBERED
+HISTORICAL STORIES OF LOVE
 
 with a small subtitle:
 

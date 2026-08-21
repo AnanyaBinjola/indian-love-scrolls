@@ -11,16 +11,16 @@ export const Route = createFileRoute("/stories/$slug")({
   head: ({ loaderData }) => {
     if (!loaderData) {
       return {
-        meta: [{ title: "Story not found — Love, Remembered" }, { name: "robots", content: "noindex" }],
+        meta: [{ title: "Story not found — Historical Stories of Love" }, { name: "robots", content: "noindex" }],
       };
     }
     const { story } = loaderData;
     const description = `${story.figures} · ${story.region}. ${truthRatings[story.truth].label}.`;
     return {
       meta: [
-        { title: `${story.title} — Love, Remembered` },
+        { title: `${story.title} — Historical Stories of Love` },
         { name: "description", content: description },
-        { property: "og:title", content: `${story.title} — Love, Remembered` },
+        { property: "og:title", content: `${story.title} — Historical Stories of Love` },
         { property: "og:description", content: description },
       ],
     };
