@@ -28,6 +28,47 @@ export const truthRatings: Record<TruthKey, { label: string; short: string; tone
   },
 };
 
+export type TimelineItem = {
+  year: string;
+  label: string;
+  note?: string;
+};
+
+export type AnnotationItem = {
+  kind: "confirmed" | "folk" | "legend";
+  label: string;
+  title: string;
+  body: string;
+};
+
+export type OtherPlaceItem = {
+  name: string;
+  description: string;
+};
+
+export type NarrativeItem = {
+  type: "paragraph" | "heading" | "blockquote" | "divider";
+  text: string;
+};
+
+export type StoryDetails = {
+  readThisFirst: string[];
+  narrative: NarrativeItem[];
+  annotations: AnnotationItem[];
+  timeline: TimelineItem[];
+  whereItHappened: {
+    title: string;
+    subtitle: string;
+    context: string;
+    otherPlaces?: OtherPlaceItem[];
+  };
+  legacy: {
+    title: string;
+    paragraphs: string[];
+  };
+  sources: string[];
+};
+
 export type Story = {
   number: string;
   slug: string;
@@ -45,9 +86,10 @@ export type Story = {
     place: string;
   };
   mapPin: { x: number; y: number; place: string };
+  details?: StoryDetails;
 };
 
-export const stories: Story[] = [
+const rawStories: Story[] = [
   {
     number: "01",
     slug: "the-taj-mahal",
@@ -131,7 +173,7 @@ export const stories: Story[] = [
     truth: "legend",
     era: "Sangam-era epic",
     motif: "lotus",
-    image: "/images/stories/the-anklet-that-burned-a-city.svg",
+    image: "/images/stories/the-anklet-that-burned-a-city.jpeg",
     hook: "He lost everything and came back to her anyway. It still wasn't enough to save him.",
     coordinates: { lat: 9.9252, lng: 78.1198, place: "Madurai, Tamil Nadu" },
     mapPin: { x: 44, y: 82, place: "Poompuhar / Madurai" },
@@ -145,7 +187,7 @@ export const stories: Story[] = [
     truth: "mixed",
     era: "16th century · Rajputana",
     motif: "floral",
-    image: "/images/stories/married-to-the-divine.svg",
+    image: "/images/stories/married-to-the-divine.jpeg",
     hook:
       "A princess who said her real husband was Krishna — and never let her royal family talk her out of it.",
     coordinates: { lat: 25.35, lng: 73.85, place: "Mewar, Rajasthan" },
@@ -160,11 +202,17 @@ export const stories: Story[] = [
     truth: "contested",
     era: "Siege of 1303 · retold from 1540",
     motif: "jali",
-    image: "/images/stories/the-legend-of-chittorgarh.svg",
+    image: "/images/stories/the-legend-of-chittorgarh.jpeg",
     hook: "A siege that really happened. A queen historians still can't agree on.",
     coordinates: { lat: 24.8887, lng: 74.6269, place: "Chittorgarh, Rajasthan" },
     mapPin: { x: 27, y: 43, place: "Chittorgarh" },
   },
 ];
+
+import { detailedStories } from "./detailedStoriesContent";
+export const stories: Story[] = rawStories.map(s => ({
+  ...s,
+  details: detailedStories[s.slug]
+}));
 
 export const getStory = (slug: string) => stories.find((s) => s.slug === slug);

@@ -11,8 +11,8 @@ const links = [
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-indigo text-parchment ink-grain">
-      <PatternBackground motif="damask" color="ivory" opacity={0.06} />
+    <footer className="relative overflow-hidden bg-walnut text-parchment ink-grain">
+      <PatternBackground motif="damask" color="ivory" opacity={0.12} />
       <div className="relative mx-auto max-w-5xl px-6 py-14 text-center">
         {/* Sub-navigation links directly at the start of footer */}
         <nav className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
@@ -39,9 +39,20 @@ export function Footer() {
           documented history, this is clearly marked on its page.
         </p>
 
-        <p className="mt-8 meta-label text-sand/45">
-          A project by [Your Group / Class Name] · [Year]
-        </p>
+        <div className="mt-10 max-w-xl mx-auto border-t border-gold/25 pt-6 text-center text-parchment/70">
+          <p className="font-display text-sm tracking-widest text-gold/90">
+            A project by B.Tech CSE V Sem, Section-A, Group-4:
+          </p>
+          <ul className="mt-4 grid grid-cols-1 gap-2 text-xs sm:grid-cols-2 text-left max-w-md mx-auto meta-label text-sand/80 pl-4 sm:pl-8">
+            <li>Roll No. 14: Aishwarya Pathak</li>
+            <li>Roll No. 15: Aishwarya Saksena</li>
+            <li>Roll No. 16: Akanksha Yadav</li>
+            <li>Roll No. 24: Ananya Binjola</li>
+            <li>Roll No. 44: Arpita Parul</li>
+            <li>Roll No. 46: Arya Rai</li>
+            <li>Roll No. 53: Bhumi Agarwal</li>
+          </ul>
+        </div>
       </div>
     </footer>
   );

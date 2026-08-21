@@ -11,23 +11,24 @@ export function StoryCard({ story, className }: { story: Story; className?: stri
       to="/stories/$slug"
       params={{ slug: story.slug }}
       className={cn(
-        "group relative flex flex-col overflow-hidden border border-gold/40 bg-card paper-grain",
+        "group relative flex flex-col overflow-hidden border border-gold/45 bg-card paper-grain rounded-none",
         "transition-[transform,box-shadow,border-color] duration-500 ease-out",
         "hover:-translate-y-1 hover:border-gold/80 hover:shadow-[var(--shadow-raised)]",
         className,
       )}
       style={{ boxShadow: "var(--shadow-manuscript)" }}
     >
-      {/* Image placeholder */}
+      {/* Story Image */}
       <div className="relative aspect-[4/3] overflow-hidden border-b border-gold/40 bg-oxblood/90">
-        <PatternBackground motif={story.motif} color="ivory" opacity={0.16} />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="meta-label text-sand/60">Image placeholder</span>
-        </div>
-        <span className="absolute left-4 top-3 font-display text-sm tracking-[0.3em] text-sand/80">
+        <img
+          src={story.image}
+          alt={story.title}
+          className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+        />
+        <span className="absolute left-4 top-3 font-display text-sm tracking-[0.3em] text-parchment text-shadow-heritage">
           {story.number}
         </span>
-        <div className="absolute inset-0 bg-gradient-to-t from-oxblood/70 via-transparent to-transparent transition-transform duration-700 ease-out group-hover:scale-[1.04]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-oxblood/80 via-transparent to-transparent" />
       </div>
 
       <div className="relative flex flex-1 flex-col gap-3 p-6">

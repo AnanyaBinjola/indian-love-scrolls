@@ -6,6 +6,7 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  ScrollRestoration,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
@@ -13,6 +14,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "@/components/heritage/Navbar";
 import { Footer } from "@/components/heritage/Footer";
+import { PatternBackground } from "@/components/heritage/PatternBackground";
 
 function NotFoundComponent() {
   return (
@@ -120,13 +122,19 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="flex min-h-screen flex-col bg-parchment">
-        <Navbar />
-        <main className="flex-1">
-          {/* Required: nested routes render here. */}
-          <Outlet />
-        </main>
-        <Footer />
+      <div className="flex min-h-screen flex-col bg-parchment relative overflow-hidden">
+        <ScrollRestoration />
+        {/* Global Watermark Pattern (insp. Image 1/5) */}
+        <PatternBackground motif="paisley" color="gold" opacity={0.14} className="fixed inset-0 z-0 select-none pointer-events-none" />
+        
+        <div className="relative z-10 flex flex-col min-h-screen flex-1">
+          <Navbar />
+          <main className="flex-1">
+            {/* Required: nested routes render here. */}
+            <Outlet />
+          </main>
+          <Footer />
+        </div>
       </div>
     </QueryClientProvider>
   );

@@ -15,7 +15,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gold/40 bg-indigo/95 text-parchment backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b border-gold/40 bg-walnut/90 text-parchment backdrop-blur-sm">
       <PatternBackground motif="jali" color="ivory" opacity={0.06} />
       <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-3.5 sm:px-8">
         <Link to="/" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
@@ -71,7 +71,7 @@ export function Navbar() {
       <div className="gold-rule" />
 
       {open && (
-        <nav className="relative border-t border-gold/30 bg-indigo px-5 py-4 md:hidden">
+        <nav className="relative border-t border-gold/30 bg-walnut px-5 py-4 md:hidden">
           <ul className="flex flex-col divide-y divide-gold/20">
             {links.map((l) => (
               <li key={l.to}>

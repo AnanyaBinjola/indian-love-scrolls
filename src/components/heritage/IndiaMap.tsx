@@ -8,6 +8,7 @@ import { TruthBadge } from "./TruthBadge";
 export function IndiaMap({ compact = false }: { compact?: boolean }) {
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const mapInstanceRef = useRef<any>(null);
+  const mapBoundsRef = useRef<any>(null);
   const [activeStory, setActiveStory] = useState<Story | null>(null);
   const [hoverPosition, setHoverPosition] = useState<{ x: number; y: number } | null>(null);
   const [isClient, setIsClient] = useState(false);
@@ -39,15 +40,16 @@ export function IndiaMap({ compact = false }: { compact?: boolean }) {
       const map = L.map(mapContainerRef.current, {
         center: initialCenter,
         zoom: initialZoom,
-        minZoom: 4,
+        minZoom: 3,
         maxZoom: 9,
         maxBounds: [
-          [5.0, 65.0], // South-West (Indian Ocean / Arabian Sea)
-          [38.5, 100.0], // North-East (Himalayas / Assam)
+          [5.0, 60.0], // Expanded South-West (Indian Ocean / Arabian Sea)
+          [38.5, 102.0], // Expanded North-East (Himalayas / Assam)
         ],
         maxBoundsViscosity: 0.85,
         zoomControl: true,
-        scrollWheelZoom: false, // Prevent hijacking page scroll
+        scrollWheelZoom: true, // Allow zoom with mouse scroll
+        keyboard: false, // Prevent Leaflet from auto-focusing on creation
       });
 
       // CartoDB Positron / Voyager layer with heritage warmth
@@ -61,14 +63,33 @@ export function IndiaMap({ compact = false }: { compact?: boolean }) {
         },
       ).addTo(map);
 
+      // Custom colors mapping matching CSS custom properties
+      const getColorConfig = (truth: string) => {
+        switch (truth) {
+          case "documented":
+            return { colorVar: "forest", borderColor: "var(--parchment)" };
+          case "folk":
+            return { colorVar: "gold", borderColor: "var(--parchment)" };
+          case "mixed":
+            return { colorVar: "forest", borderColor: "var(--gold)" };
+          case "legend":
+          case "contested":
+          default:
+            return { colorVar: "indigo-deep", borderColor: "var(--parchment)" };
+        }
+      };
+
+      const markers: any[] = [];
+
       // Create Custom Pins for each story
       stories.forEach((story) => {
+        const { colorVar, borderColor } = getColorConfig(story.truth);
         const pinIcon = L.divIcon({
           className: "custom-leaflet-marker",
           html: `
             <div class="relative group cursor-pointer -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
-              <div class="absolute w-8 h-8 rounded-full bg-oxblood/20 heritage-pin-pulse"></div>
-              <div class="relative flex items-center justify-center w-6 h-6 rounded-full bg-oxblood border-2 border-gold text-parchment shadow-md transition-transform duration-300 hover:scale-125">
+              <div class="absolute w-8 h-8 rounded-full heritage-pin-pulse" style="background-color: var(--${colorVar}-pulse);"></div>
+              <div class="relative flex items-center justify-center w-6 h-6 rounded-full text-parchment shadow-md transition-transform duration-300 hover:scale-125" style="background-color: var(--${colorVar}); border: 2px solid ${borderColor};">
                 <span class="text-[9px] font-bold font-display leading-none">${story.number}</span>
               </div>
             </div>
@@ -87,7 +108,6 @@ export function IndiaMap({ compact = false }: { compact?: boolean }) {
         marker.on("mouseover", (e) => {
           setActiveStory(story);
           if (mapContainerRef.current) {
-            const rect = mapContainerRef.current.getBoundingClientRect();
             const point = map.latLngToContainerPoint([
               story.coordinates.lat,
               story.coordinates.lng,
@@ -99,7 +119,14 @@ export function IndiaMap({ compact = false }: { compact?: boolean }) {
         marker.on("click", () => {
           navigate({ to: "/stories/$slug", params: { slug: story.slug } });
         });
+
+        markers.push(marker);
       });
+
+      // Fit bounds to show all markers
+      const group = L.featureGroup(markers);
+      mapBoundsRef.current = group.getBounds();
+      map.fitBounds(mapBoundsRef.current, { padding: [45, 45] });
 
       // Update hover position on pan/zoom
       map.on("zoom pan move", () => {
@@ -134,8 +161,9 @@ export function IndiaMap({ compact = false }: { compact?: boolean }) {
   }, [isClient, compact, navigate]);
 
   const resetView = () => {
-    if (mapInstanceRef.current) {
-      mapInstanceRef.current.setView([22.8, 79.6], compact ? 4 : 5, {
+    if (mapInstanceRef.current && mapBoundsRef.current) {
+      mapInstanceRef.current.fitBounds(mapBoundsRef.current, {
+        padding: [45, 45],
         animate: true,
       });
       setActiveStory(null);
@@ -194,7 +222,6 @@ export function IndiaMap({ compact = false }: { compact?: boolean }) {
         <div
           ref={mapContainerRef}
           className="h-full w-full bg-parchment"
-          tabIndex={0}
           aria-label="Interactive Leaflet Map of India"
         />
 
@@ -208,18 +235,51 @@ export function IndiaMap({ compact = false }: { compact?: boolean }) {
           </div>
         )}
 
-        {/* Hover Card Overlay (Requirement 1) */}
+        {/* Hover Card Overlay (Requirement 1 & 3) */}
         {activeStory && hoverPosition && (
           <div
-            className="story-hover-card pointer-events-auto absolute z-[1000] -translate-x-1/2 -translate-y-full transition-all duration-200 ease-out"
-            style={{
-              left: `${hoverPosition.x}px`,
-              top: `${hoverPosition.y - 18}px`,
-            }}
+            className="story-hover-card pointer-events-auto absolute z-[1000] transition-all duration-200 ease-out"
+            style={(() => {
+              const containerHeight = mapContainerRef.current?.clientHeight || 580;
+              const containerWidth = mapContainerRef.current?.clientWidth || 1000;
+              const cardWidth = 280;
+              const cardHeight = 310;
+
+              let cardStyle: React.CSSProperties = {};
+              const spaceAbove = hoverPosition.y;
+              const isBelow = spaceAbove < cardHeight + 24;
+
+              // Vertical positioning to keep within map container boundaries
+              if (isBelow) {
+                let topPos = hoverPosition.y + 18;
+                if (topPos + cardHeight > containerHeight - 12) {
+                  topPos = containerHeight - cardHeight - 12;
+                }
+                cardStyle.top = `${topPos}px`;
+              } else {
+                let topPos = hoverPosition.y - 18 - cardHeight;
+                if (topPos < 12) {
+                  topPos = 12;
+                }
+                cardStyle.top = `${topPos}px`;
+              }
+
+              // Horizontal positioning to keep within map container boundaries
+              let leftPos = hoverPosition.x - cardWidth / 2;
+              if (leftPos < 12) {
+                leftPos = 12;
+              } else if (leftPos + cardWidth > containerWidth - 12) {
+                leftPos = containerWidth - cardWidth - 12;
+              }
+
+              cardStyle.left = `${leftPos}px`;
+              cardStyle.width = `${cardWidth}px`;
+              return cardStyle;
+            })()}
             onMouseEnter={() => setActiveStory(activeStory)}
             onMouseLeave={() => setActiveStory(null)}
           >
-            <div className="relative w-64 overflow-hidden border border-gold/80 bg-parchment shadow-2xl transition-transform duration-300 hover:scale-[1.02] sm:w-72">
+            <div className="relative w-full overflow-hidden border border-gold/80 bg-parchment shadow-2xl transition-transform duration-300 hover:scale-[1.02]">
               <CornerFlourishes />
 
               {/* Story Thumbnail Image */}
@@ -261,8 +321,36 @@ export function IndiaMap({ compact = false }: { compact?: boolean }) {
                 </div>
               </div>
 
-              {/* Pointer Tip below card */}
-              <div className="absolute -bottom-2 left-1/2 h-4 w-4 -translate-x-1/2 rotate-45 border-b border-r border-gold/80 bg-parchment" />
+              {/* Pointer Tip below or above card, matching marker X position */}
+              {(() => {
+                const cardHeight = 310;
+                const spaceAbove = hoverPosition.y;
+                const isBelow = spaceAbove < cardHeight + 24;
+                const cardWidth = 280;
+                let leftPos = hoverPosition.x - cardWidth / 2;
+                if (leftPos < 12) {
+                  leftPos = 12;
+                } else if (leftPos + cardWidth > (mapContainerRef.current?.clientWidth || 1000) - 12) {
+                  leftPos = (mapContainerRef.current?.clientWidth || 1000) - cardWidth - 12;
+                }
+                const pointerOffset = hoverPosition.x - leftPos;
+
+                if (isBelow) {
+                  return (
+                    <div
+                      className="absolute -top-2 h-4 w-4 -translate-x-1/2 rotate-45 border-t border-l border-gold/80 bg-parchment"
+                      style={{ left: `${pointerOffset}px` }}
+                    />
+                  );
+                } else {
+                  return (
+                    <div
+                      className="absolute -bottom-2 h-4 w-4 -translate-x-1/2 rotate-45 border-b border-r border-gold/80 bg-parchment"
+                      style={{ left: `${pointerOffset}px` }}
+                    />
+                  );
+                }
+              })()}
             </div>
           </div>
         )}

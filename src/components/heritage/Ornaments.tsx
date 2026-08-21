@@ -118,3 +118,42 @@ export function DecorativeBorder({
     </div>
   );
 }
+
+export function VineDivider({ className }: { className?: string }) {
+  return (
+    <div className={cn("flex items-center justify-center gap-2 text-gold/70 my-8 select-none", className)} aria-hidden="true">
+      <svg viewBox="0 0 300 24" className="w-full max-w-sm h-6 text-gold" fill="none">
+        <path
+          d="M10 12 C 50 2, 80 22, 120 12 C 140 7, 145 12, 150 12 C 155 12, 160 7, 180 12 C 220 22, 250 2, 290 12"
+          stroke="currentColor"
+          strokeWidth="1.2"
+          strokeLinecap="round"
+        />
+        {/* Center Lotus in Terracotta */}
+        <path
+          d="M150 4 C 147 8, 145 12, 150 18 C 155 12, 153 8, 150 4 Z"
+          fill="var(--terracotta)"
+          stroke="currentColor"
+          strokeWidth="0.8"
+        />
+        <path
+          d="M150 18 C 143 14, 140 10, 138 6 C 144 8, 147 12, 150 18 Z"
+          fill="var(--terracotta)"
+          stroke="currentColor"
+          strokeWidth="0.8"
+        />
+        <path
+          d="M150 18 C 157 14, 160 10, 162 6 C 156 8, 153 12, 150 18 Z"
+          fill="var(--terracotta)"
+          stroke="currentColor"
+          strokeWidth="0.8"
+        />
+        {/* Small leaves along the vine */}
+        <path d="M40 9 C 38 4, 30 6, 30 11 C 36 12, 38 10, 40 9 Z" fill="currentColor" opacity="0.85" />
+        <path d="M90 15 C 92 20, 100 18, 100 13 C 94 12, 92 14, 90 15 Z" fill="currentColor" opacity="0.85" />
+        <path d="M210 15 C 208 20, 200 18, 200 13 C 206 12, 208 14, 210 15 Z" fill="currentColor" opacity="0.85" />
+        <path d="M260 9 C 262 4, 270 6, 270 11 C 264 12, 262 10, 260 9 Z" fill="currentColor" opacity="0.85" />
+      </svg>
+    </div>
+  );
+}
