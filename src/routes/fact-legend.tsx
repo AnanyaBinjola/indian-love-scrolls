@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/heritage/PageHeader";
 import { TruthLegend } from "@/components/heritage/TruthLegend";
 import { PatternBackground } from "@/components/heritage/PatternBackground";
@@ -8,13 +8,13 @@ import { SectionHeading } from "@/components/heritage/SectionHeading";
 export const Route = createFileRoute("/fact-legend")({
   head: () => ({
     meta: [
-      { title: "Fact & Legend — Historical Stories of Love" },
+      { title: "Fact & Legend - Historical Stories of Love" },
       {
         name: "description",
         content:
           "Every story here comes with a truth rating: documented history, historical core with folk detail, or literary legend.",
       },
-      { property: "og:title", content: "Fact & Legend — Historical Stories of Love" },
+      { property: "og:title", content: "Fact & Legend - Historical Stories of Love" },
       {
         property: "og:description",
         content: "How each of the eight stories is rated between documented history and legend.",

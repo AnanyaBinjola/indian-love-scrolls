@@ -1,4 +1,4 @@
-import type { StoryDetails } from "./stories";
+﻿import type { StoryDetails } from "./stories";
 
 export const detailedStories: Record<string, StoryDetails> = {
   "the-empress-behind-the-curtain": {
@@ -30,7 +30,7 @@ export const detailedStories: Record<string, StoryDetails> = {
       { type: "paragraph", text: "After Sher Afghan's death, Mehr-un-Nissa and her young daughter were brought to the imperial capital." },
       { type: "paragraph", text: "She joined the household of the senior royal women and, for a time, served **Ruqaiya Sultan Begum**, the principal wife of the late Emperor Akbar." },
       { type: "paragraph", text: "These were relatively quiet years within the large and strictly organised world of the imperial women's quarters." },
-      { type: "paragraph", text: "She was a widow and a mother, living among powerful women — but she did not yet hold high rank herself." },
+      { type: "paragraph", text: "She was a widow and a mother, living among powerful women - but she did not yet hold high rank herself." },
       
       { type: "heading", text: "Jahangir Before Nur Jahan" },
       { type: "paragraph", text: "Prince Salim was born in **1569** and was the son Emperor Akbar had long wanted." },
@@ -53,7 +53,7 @@ export const detailedStories: Record<string, StoryDetails> = {
       { type: "heading", text: "More Than the Woman Jahangir Loved" },
       { type: "paragraph", text: "Nur Jahan gained unusual access to the emperor." },
       { type: "paragraph", text: "She influenced important decisions, participated in court politics and joined royal ceremonies. She controlled her own money and property and issued official orders, known as **farmans**." },
-      { type: "paragraph", text: "Coins were produced bearing her name alongside Jahangir's — an extraordinary distinction for a Mughal woman." },
+      { type: "paragraph", text: "Coins were produced bearing her name alongside Jahangir's - an extraordinary distinction for a Mughal woman." },
       { type: "paragraph", text: "She appeared at the public balcony, or **jharoka**, to hear requests. She went on royal hunts and supported buildings, gardens, textile designs and art." },
       { type: "paragraph", text: "Her influence extended beyond her own position. Her father and brother also rose to very high positions within the Mughal court." },
       { type: "paragraph", text: "Nur Jahan was therefore much more than \"the woman Jahangir loved.\"" },
@@ -63,7 +63,7 @@ export const detailedStories: Record<string, StoryDetails> = {
       { type: "heading", text: "A Partnership of Love and Power" },
       { type: "paragraph", text: "The relationship between Jahangir and Nur Jahan was both **personal and political**." },
       { type: "paragraph", text: "As Jahangir's health weakened and his dependence on alcohol and opium increased, Nur Jahan took on greater responsibility. She helped manage court business and influenced important decisions." },
-      { type: "paragraph", text: "The evidence described in the source — coins bearing her name, official titles, farmans issued under her authority, and her participation in ceremonies and royal hunts — points to an unusual sharing of imperial influence." },
+      { type: "paragraph", text: "The evidence described in the source - coins bearing her name, official titles, farmans issued under her authority, and her participation in ceremonies and royal hunts - points to an unusual sharing of imperial influence." },
       { type: "paragraph", text: "Yet Nur Jahan was not an independent ruler." },
       { type: "paragraph", text: "Her authority remained part of the larger Mughal imperial system." },
       { type: "paragraph", text: "Their relationship is therefore best understood not simply as a romance, but as a partnership in which personal influence and political power became closely intertwined." },
@@ -145,7 +145,7 @@ export const detailedStories: Record<string, StoryDetails> = {
       title: "What Survives",
       paragraphs: [
         "Nur Jahan's legacy extends far beyond her relationship with Jahangir.",
-        "She remains remembered for the unusual political authority she exercised within the Mughal court — issuing official orders, appearing at public ceremonies, participating in royal hunts and having coins produced with her name alongside the emperor's.",
+        "She remains remembered for the unusual political authority she exercised within the Mughal court - issuing official orders, appearing at public ceremonies, participating in royal hunts and having coins produced with her name alongside the emperor's.",
         "Her architectural legacy is equally important.",
         "She completed the white-marble tomb of her parents, Itimad-ud-Daulah, in Agra, a monument often viewed as an early step toward the architectural style associated with the Taj Mahal.",
         "Her own tomb at Shahdara in Lahore became her final resting place.",
@@ -153,24 +153,24 @@ export const detailedStories: Record<string, StoryDetails> = {
       ]
     },
     sources: [
-      "Historical account of Mehr-un-Nissa and Jahangir — The supplied account covers Nur Jahan's early life, first marriage, relationship with Jahangir, political influence, Jahangir's final years and her life after his death.",
-      "Note on historical tradition — The account explicitly distinguishes later romantic additions from the historical record, particularly the story of Mehr-un-Nissa being abandoned as a baby.",
-      "Note on Nur Jahan's political role — The account records her use of farmans, control of property and money, appearance on coins, participation in ceremonies and hunts, and influence over court affairs.",
+      "Historical account of Mehr-un-Nissa and Jahangir - The supplied account covers Nur Jahan's early life, first marriage, relationship with Jahangir, political influence, Jahangir's final years and her life after his death.",
+      "Note on historical tradition - The account explicitly distinguishes later romantic additions from the historical record, particularly the story of Mehr-un-Nissa being abandoned as a baby.",
+      "Note on Nur Jahan's political role - The account records her use of farmans, control of property and money, appearance on coins, participation in ceremonies and hunts, and influence over court affairs.",
       "Source note: The page deliberately distinguishes documented events from later storytelling. Where the supplied account identifies a detail as unconfirmed or traditional, it is marked accordingly rather than presented as established fact."
     ]
   },
   "the-taj-mahal": {
     readThisFirst: [
-      "This story is rated **Documented History**. The marriage of Shah Jahan and Mumtaz Mahal, her death in 1631, and the construction of the Taj Mahal beginning around 1632 are recorded historical events. The romantic story surrounding the monument, however, contains details that entered popular tradition later — including the claim that Mumtaz asked Shah Jahan on her deathbed to never remarry and to build her a tomb unlike any other."
+      "This story is rated **Documented History**. The marriage of Shah Jahan and Mumtaz Mahal, her death in 1631, and the construction of the Taj Mahal beginning around 1632 are recorded historical events. The romantic story surrounding the monument, however, contains details that entered popular tradition later - including the claim that Mumtaz asked Shah Jahan on her deathbed to never remarry and to build her a tomb unlike any other."
     ],
     narrative: [
       { type: "heading", text: "Two Houses of the Empire" },
       { type: "paragraph", text: "In the winter of 1607, in the marketplaces of Agra, a betrothal was arranged between two young members of the Mughal court. Prince Khurram, the fifteen-year-old third son of Emperor Jahangir and grandson of Akbar, was promised to Arjumand Banu Begum, who was about fourteen." },
-      { type: "paragraph", text: "Arjumand was already part of the political heart of the empire. Her grandfather, Mirza Ghiyas Beg, was a Persian nobleman who had risen through Mughal service to become Jahangir's lord treasurer and later his chief minister. Her father, Abu'l-Hasan Asaf Khan, also held high office. Her aunt was Mihr-un-Nisa, the woman who would become Jahangir's most powerful wife — Nur Jahan." },
+      { type: "paragraph", text: "Arjumand was already part of the political heart of the empire. Her grandfather, Mirza Ghiyas Beg, was a Persian nobleman who had risen through Mughal service to become Jahangir's lord treasurer and later his chief minister. Her father, Abu'l-Hasan Asaf Khan, also held high office. Her aunt was Mihr-un-Nisa, the woman who would become Jahangir's most powerful wife - Nur Jahan." },
       { type: "paragraph", text: "Arjumand Banu was therefore born into a family whose fortunes were closely tied to the Mughal dynasty itself. Their marriage would begin not as an isolated love story, but within the political world of an imperial court." },
       
       { type: "heading", text: "A Marriage Delayed, and Then Kept" },
-      { type: "paragraph", text: "Five years passed between the betrothal and the marriage — an unusually long interval by Mughal standards. Historians point to the changing fortunes of Arjumand's family at court and the customary consultation of astrologers for an auspicious date as possible explanations, although the chronicles do not give one definitive reason." },
+      { type: "paragraph", text: "Five years passed between the betrothal and the marriage - an unusually long interval by Mughal standards. Historians point to the changing fortunes of Arjumand's family at court and the customary consultation of astrologers for an auspicious date as possible explanations, although the chronicles do not give one definitive reason." },
       { type: "paragraph", text: "On **10 May 1612**, Khurram and Arjumand Banu were married in Agra." },
       { type: "paragraph", text: "It was not his first marriage. Khurram had already married a princess of Kandahar and would later take a third wife, as marriages among Mughal royalty served political and dynastic purposes as much as personal ones." },
       { type: "paragraph", text: "Yet contemporary court history singles out this marriage as different. Muhammad Amin Qazwini, an official chronicler who served under Shah Jahan, described an extraordinary closeness and trust between the emperor and this particular wife. Arjumand was eventually given the title **Mumtaz Mahal**, meaning \"Chosen One of the Palace,\" marking her position as his most favored consort." },
@@ -260,8 +260,8 @@ export const detailedStories: Record<string, StoryDetails> = {
       ]
     },
     sources: [
-      "Muhammad Amin Qazwini — An early official chronicler who served under Shah Jahan and recorded the unusually close relationship between Shah Jahan and Mumtaz Mahal.",
-      "Ebba Koch — Scholarship on the Taj Mahal and the wider architectural world of Shah Jahan, including Mughal Agra's riverfront gardens and palace culture.",
+      "Muhammad Amin Qazwini - An early official chronicler who served under Shah Jahan and recorded the unusually close relationship between Shah Jahan and Mumtaz Mahal.",
+      "Ebba Koch - Scholarship on the Taj Mahal and the wider architectural world of Shah Jahan, including Mughal Agra's riverfront gardens and palace culture.",
       "Source note: The supplied account distinguishes documented events from later popular tradition. In particular, the deathbed promise attributed to Mumtaz Mahal is presented as a popular tradition rather than as a firmly documented event."
     ]
   },
@@ -276,7 +276,7 @@ export const detailedStories: Record<string, StoryDetails> = {
     narrative: [
       { type: "heading", text: "The Kingdom of Singhal and the Parrot Hiraman" },
       { type: "paragraph", text: "Far across the sea lay the island kingdom of **Singhal Dwip**, ruled by King Gandharvasen." },
-      { type: "paragraph", text: "To him was born a daughter, **Padmini**, whose beauty the poet describes as unmatched among mortal women — radiant enough to put the moon and the lotus to shame." },
+      { type: "paragraph", text: "To him was born a daughter, **Padmini**, whose beauty the poet describes as unmatched among mortal women - radiant enough to put the moon and the lotus to shame." },
       { type: "paragraph", text: "Padmini grew up amid the splendour of her father's palace. Among her closest companions was a remarkable parrot named **Hiraman**." },
       { type: "paragraph", text: "Hiraman was no ordinary bird. Trained in speech and learning, he could converse like a sage." },
       { type: "paragraph", text: "When Padmini's father became alarmed by the parrot's extraordinary wisdom and closeness to his daughter, he ordered Hiraman to be killed." },
@@ -291,17 +291,17 @@ export const detailedStories: Record<string, StoryDetails> = {
       { type: "blockquote", text: "He fell in love with a woman he had never seen, because a parrot had given beauty a name." },
       
       { type: "heading", text: "The Journey and the Winning of Padmini" },
-      { type: "paragraph", text: "Ratan Sen abandoned the trappings of kingship and disguised himself as a **Yogi** — an ascetic renunciant carrying a begging bowl and covered in ashes." },
+      { type: "paragraph", text: "Ratan Sen abandoned the trappings of kingship and disguised himself as a **Yogi** - an ascetic renunciant carrying a begging bowl and covered in ashes." },
       { type: "paragraph", text: "Hiraman became his guide." },
       { type: "paragraph", text: "Together with a group of loyal companions, also disguised as yogis, Ratan Sen began the perilous journey to Singhal Dwip." },
       { type: "paragraph", text: "The journey was filled with hardship." },
-      { type: "paragraph", text: "The poem presents the crossing of difficult terrain and the suffering of the travellers as a test of devotion — the kind of ordeal expected of a seeker willing to sacrifice everything for what he desires." },
+      { type: "paragraph", text: "The poem presents the crossing of difficult terrain and the suffering of the travellers as a test of devotion - the kind of ordeal expected of a seeker willing to sacrifice everything for what he desires." },
       { type: "paragraph", text: "When Ratan Sen finally reached Singhal, he settled near a Shiva temple and sacred pool and began practising severe austerities." },
       { type: "paragraph", text: "His devotion became so striking that word of the strange ascetic eventually reached the palace." },
       { type: "paragraph", text: "Padmini went to see him." },
       { type: "paragraph", text: "When the two finally beheld one another, they fell in love." },
       { type: "paragraph", text: "But Padmini's father, King Gandharvasen, did not know the stranger's true identity and resisted the union." },
-      { type: "paragraph", text: "Ratan Sen and his companions endured further trials. The poem describes an ordeal in which the disguised king and his followers prepared to sacrifice themselves upon a pyre — an ultimate demonstration of devotion." },
+      { type: "paragraph", text: "Ratan Sen and his companions endured further trials. The poem describes an ordeal in which the disguised king and his followers prepared to sacrifice themselves upon a pyre - an ultimate demonstration of devotion." },
       { type: "paragraph", text: "Their willingness to die for love eventually moved Gandharvasen." },
       { type: "paragraph", text: "Once he learned Ratan Sen's true royal identity and recognised the depth of his devotion, he consented to the marriage." },
       { type: "paragraph", text: "Ratan Sen and Padmini were married with great ceremony in Singhal." },
@@ -314,7 +314,7 @@ export const detailedStories: Record<string, StoryDetails> = {
       { type: "paragraph", text: "Raghav Chetan left Chittor carrying resentment and a desire for revenge." },
       { type: "paragraph", text: "He travelled to Delhi and sought the court of **Sultan Alauddin Khalji**." },
       { type: "paragraph", text: "There, he told the Sultan about Padmini's incomparable beauty." },
-      { type: "paragraph", text: "He described her in such extravagant terms that Khalji became consumed by the desire to possess her — even though he had never seen her." },
+      { type: "paragraph", text: "He described her in such extravagant terms that Khalji became consumed by the desire to possess her - even though he had never seen her." },
       { type: "paragraph", text: "The story's central conflict had begun." },
       
       { type: "heading", text: "The Sultan and the Mirror" },
@@ -328,7 +328,7 @@ export const detailedStories: Record<string, StoryDetails> = {
       { type: "paragraph", text: "As Ratan Sen escorted Khalji toward the fort's gates as an act of courtly courtesy, Khalji's men seized the Rajput king through deceit." },
       { type: "paragraph", text: "Ratan Sen was carried away as a prisoner." },
       { type: "paragraph", text: "The demand for his release was Padmini herself." },
-      { type: "blockquote", text: "The queen was never seen by the Sultan directly — yet her reflection became the turning point of the siege." },
+      { type: "blockquote", text: "The queen was never seen by the Sultan directly - yet her reflection became the turning point of the siege." },
       
       { type: "heading", text: "The Rescue by Gora and Badal" },
       { type: "paragraph", text: "News of Ratan Sen's capture threw Chittor into turmoil." },
@@ -370,7 +370,7 @@ export const detailedStories: Record<string, StoryDetails> = {
       { type: "paragraph", text: "Yet beneath this earthly narrative lies another story." },
       { type: "paragraph", text: "Within the poem's **Sufi allegorical framework**, Ratan Sen's search for Padmini represents the soul's search for divine beauty and truth." },
       { type: "paragraph", text: "Padmini becomes more than a queen." },
-      { type: "paragraph", text: "She becomes the object of a spiritual quest — a truth that, once glimpsed, cannot simply be possessed through worldly power." },
+      { type: "paragraph", text: "She becomes the object of a spiritual quest - a truth that, once glimpsed, cannot simply be possessed through worldly power." },
       { type: "paragraph", text: "This is what gives *Padmavat* its unusual character." },
       { type: "paragraph", text: "It is simultaneously a story of love, valour and sacrifice and a spiritual parable about longing for something beyond the material world." },
       { type: "paragraph", text: "History is refracted through legend." },
@@ -448,8 +448,8 @@ export const detailedStories: Record<string, StoryDetails> = {
       ]
     },
     sources: [
-      "Malik Muhammad Jayasi — Padmavat (1540 CE). The primary literary source for this page. The supplied narrative is explicitly based on the poem's own events, characters and sequence, without additions from later retellings, folk variations or cinematic adaptations.",
-      "Historical context — The poem places its narrative against the backdrop of Alauddin Khalji's siege of Chittor in 1303 CE. This historical backdrop should not be confused with independent evidence for the poem's romantic narrative.",
+      "Malik Muhammad Jayasi - Padmavat (1540 CE). The primary literary source for this page. The supplied narrative is explicitly based on the poem's own events, characters and sequence, without additions from later retellings, folk variations or cinematic adaptations.",
+      "Historical context - The poem places its narrative against the backdrop of Alauddin Khalji's siege of Chittor in 1303 CE. This historical backdrop should not be confused with independent evidence for the poem's romantic narrative.",
       "Source note: This page deliberately presents Padmini and Ratan Sen as a literary legend, not as documented historical figures whose romance can be independently verified from the supplied source. The distinction between the historical backdrop and Jayasi's literary imagination is central to understanding Padmavat."
     ]
   },
@@ -457,13 +457,13 @@ export const detailedStories: Record<string, StoryDetails> = {
     readThisFirst: [
       "This story is rated **Documented Figure, Devotional Legend**.",
       "Mirabai is remembered as one of India's great devotional figures, but the narrative surrounding her life survives heavily through oral and literary tradition. The account on this page is therefore not presented as a chronological historical biography.",
-      "Instead, it follows the devotional legends associated with Mirabai across Rajasthan and North India — including the palace tensions, the poison cup, her devotion to Giridhar Gopal and her departure from royal life.",
+      "Instead, it follows the devotional legends associated with Mirabai across Rajasthan and North India - including the palace tensions, the poison cup, her devotion to Giridhar Gopal and her departure from royal life.",
       "Images such as the peacock feather, the monsoon cloud and poison turning to nectar are recurring elements of that tradition. The narrative presented here is original prose inspired by those traditions, not a translation of Mirabai's actual devotional poems."
     ],
     narrative: [
       { type: "heading", text: "The Palace Tension" },
       { type: "paragraph", text: "Late afternoon light came through the jharokha screens in broken squares, falling across the stone floor of Mirabai's chamber." },
-      { type: "paragraph", text: "Outside, the palace moved through its ordinary evening business — anklets on marble, low voices, and the smell of ghee and spice drifting from the royal kitchens." },
+      { type: "paragraph", text: "Outside, the palace moved through its ordinary evening business - anklets on marble, low voices, and the smell of ghee and spice drifting from the royal kitchens." },
       { type: "paragraph", text: "It was a world of duty." },
       { type: "paragraph", text: "Heavy silks. Veils lowered before men who were not kin. A thousand small rules defining what life inside the palace was supposed to look like." },
       { type: "paragraph", text: "Mira sat apart from it all." },
@@ -481,7 +481,7 @@ export const detailedStories: Record<string, StoryDetails> = {
       { type: "paragraph", text: "She removed her wedding silks and put on a plain length of saffron cloth." },
       { type: "paragraph", text: "In the bronze mirror, she did not see a princess of Mewar." },
       { type: "paragraph", text: "She saw a woman dressed for the one she loved." },
-      { type: "paragraph", text: "The marigolds on her small altar had wilted in the heat. She replaced them with fresh flowers and hummed the tune that had come to her that morning — not composed, simply remembered, the way his songs always seemed to arrive already finished." },
+      { type: "paragraph", text: "The marigolds on her small altar had wilted in the heat. She replaced them with fresh flowers and hummed the tune that had come to her that morning - not composed, simply remembered, the way his songs always seemed to arrive already finished." },
       { type: "paragraph", text: "Footsteps stopped outside her door." },
       { type: "paragraph", text: "Even here, in the middle of Rajput power, her quiet was enough to keep them out." },
       { type: "blockquote", text: "She belonged to a world of palaces, but her devotion belonged somewhere else." },
@@ -522,7 +522,7 @@ export const detailedStories: Record<string, StoryDetails> = {
       { type: "paragraph", text: "Ahead was the road to **Vrindavan**, where the god who had called to her through temple bells seemed present in every tree beside the river." },
       { type: "paragraph", text: "The desert opened around her, pale gold in the early light." },
       { type: "paragraph", text: "Her bare feet found the rhythm of walking just as her fingers find the strings of her ektara." },
-      { type: "paragraph", text: "Sometimes dark clouds gathered on the horizon, and she watched them as she always had — seeing in their colour something of Krishna's dark skin, hearing in distant thunder something closer to longing than to weather." },
+      { type: "paragraph", text: "Sometimes dark clouds gathered on the horizon, and she watched them as she always had - seeing in their colour something of Krishna's dark skin, hearing in distant thunder something closer to longing than to weather." },
       { type: "paragraph", text: "She sang of the monsoon clouds gathering dark and low." },
       { type: "paragraph", text: "The words were not really about rain." },
       { type: "paragraph", text: "They were about him." },
@@ -578,7 +578,7 @@ export const detailedStories: Record<string, StoryDetails> = {
     whereItHappened: {
       title: "Mewar & Vrindavan",
       subtitle: "Mewar, Rajasthan",
-      context: "Mewar forms the setting for the palace portion of Mirabai's story — a world of Rajput power, royal expectations and the devotional life that increasingly separates Mira from the court around her.",
+      context: "Mewar forms the setting for the palace portion of Mirabai's story - a world of Rajput power, royal expectations and the devotional life that increasingly separates Mira from the court around her.",
       otherPlaces: [
         { name: "Vrindavan", description: "The Place of Devotional Return. In the narrative, Vrindavan becomes the destination of Mirabai's journey after she leaves Chittor. The road to Vrindavan is described not simply as physical travel, but as a pilgrimage toward the divine presence she has sought throughout her life." }
       ]
@@ -601,8 +601,8 @@ export const detailedStories: Record<string, StoryDetails> = {
       ]
     },
     sources: [
-      "Devotional traditions associated with Mirabai — The supplied narrative draws on devotional legends associated with Mirabai as transmitted through oral and literary traditions across Rajasthan and North India.",
-      "Narrative source — The supplied text, The Flute That Never Stopped Calling, presents an original prose narrative of Mirabai and Giridhar Gopal set within Mewar and the wider devotional tradition surrounding her.",
+      "Devotional traditions associated with Mirabai - The supplied narrative draws on devotional legends associated with Mirabai as transmitted through oral and literary traditions across Rajasthan and North India.",
+      "Narrative source - The supplied text, The Flute That Never Stopped Calling, presents an original prose narrative of Mirabai and Giridhar Gopal set within Mewar and the wider devotional tradition surrounding her.",
       "Important source note: This narrative should not be treated as a translation of Mirabai's actual devotional poems. The supplied source explicitly states that its imagery and scenes are original prose inspired by recurring devotional traditions, including the peacock feather, monsoon cloud and poison turning to nectar.",
       "Historical framing note: Because the supplied source does not provide independently documented dates for the individual episodes, this page uses a Story Structure rather than presenting the devotional narrative as a dated historical chronology."
     ]
@@ -625,7 +625,7 @@ export const detailedStories: Record<string, StoryDetails> = {
       { type: "paragraph", text: "He leaves Takht Hazara behind." },
       { type: "paragraph", text: "The departure establishes the character who will eventually become Ranjha: when society closes one door, he walks away." },
       { type: "paragraph", text: "His journey takes him toward the land of the Sials." },
-      { type: "blockquote", text: "“Akh Rajhia bha ki bahu tere, des apna chhad sidhar nahi…” <br/><span class='block mt-2 text-xs opacity-70'>English rendering: A farewell to the brotherly world he is leaving behind — a world that, without brothers, now feels deserted and without shelter.</span>" },
+      { type: "blockquote", text: "“Akh Rajhia bha ki bahu tere, des apna chhad sidhar nahi…” <br/><span class='block mt-2 text-xs opacity-70'>English rendering: A farewell to the brotherly world he is leaving behind - a world that, without brothers, now feels deserted and without shelter.</span>" },
       
       { type: "heading", text: "The First Glance by the Chanab" },
       { type: "paragraph", text: "At the river **Chanab**, Heer arrives with her sixty companions to enjoy the open landscape." },
@@ -644,12 +644,12 @@ export const detailedStories: Record<string, StoryDetails> = {
       { type: "heading", text: "The Cowherd, the Forest & the Flute" },
       { type: "paragraph", text: "To continue meeting without suspicion, Heer proposes that Ranjha work as the household **cowherd**." },
       { type: "paragraph", text: "Every morning he takes the family's cattle and buffaloes into the forest beside the Chanab." },
-      { type: "paragraph", text: "Heer comes with his midday meal — **churi**, prepared with affection." },
+      { type: "paragraph", text: "Heer comes with his midday meal - **churi**, prepared with affection." },
       { type: "paragraph", text: "They eat together among green fields while Ranjha's flute fills the forest." },
       { type: "paragraph", text: "The landscape becomes part of their secret." },
       { type: "paragraph", text: "The village represents the visible social order: family, reputation, marriage and duty." },
       { type: "paragraph", text: "The river and forest become thresholds where the lovers can step beyond those rules without completely leaving their world behind." },
-      { type: "paragraph", text: "The Chanab, the green forest, the bells of buffaloes, the sound of the flute, and Heer arriving with churi — these become the private vocabulary of their love." },
+      { type: "paragraph", text: "The Chanab, the green forest, the bells of buffaloes, the sound of the flute, and Heer arriving with churi - these become the private vocabulary of their love." },
       
       { type: "heading", text: "Kaido Finds the Secret" },
       { type: "paragraph", text: "Kaido, Heer's lame uncle, begins to suspect what is happening." },
@@ -671,7 +671,7 @@ export const detailedStories: Record<string, StoryDetails> = {
       { type: "paragraph", text: "The marriage contract is supposed to involve consent. Heer refuses to accept a marriage she has not chosen." },
       { type: "paragraph", text: "Yet the Qazi eventually calls witnesses and proceeds with the marriage to Saida." },
       { type: "paragraph", text: "Before marriage, Heer is the active force in the story. She chooses Ranjha. She arranges his work as a cowherd. She meets him in the forest. She confronts Kaido. She argues with her family. She challenges the Qazi." },
-      { type: "paragraph", text: "The manuscript presents this as a kind of **revolution from within** — Heer asks society to follow its own principles to their logical end." },
+      { type: "paragraph", text: "The manuscript presents this as a kind of **revolution from within** - Heer asks society to follow its own principles to their logical end." },
       
       { type: "heading", text: "The Doli: When Love Is Carried Away" },
       { type: "paragraph", text: "Heer is placed in the wedding **doli**." },
@@ -712,7 +712,7 @@ export const detailedStories: Record<string, StoryDetails> = {
       { type: "paragraph", text: "There he learns about **Saihti**, Heer's sister-in-law, who secretly loves a Baloch youth named **Murad**." },
       { type: "paragraph", text: "Their forbidden love becomes the bridge through which Ranjha can reach Heer." },
       { type: "blockquote", text: "“Ghar aa nanan ne gal kiti, bhabhi ik jogi nawa aia ni…” <br/><span class='block mt-2 text-xs opacity-70'>English rendering: \"Sister-in-law, a new yogi has come to the town…\"</span>" },
-      { type: "paragraph", text: "Saihti describes the yogi as beautiful, moon-like and unusually humble — as though he were searching for a lost jewel." },
+      { type: "paragraph", text: "Saihti describes the yogi as beautiful, moon-like and unusually humble - as though he were searching for a lost jewel." },
       { type: "paragraph", text: "The clues eventually point toward Takht Hazara." },
       { type: "paragraph", text: "Ranjha is no longer a stranger. Heer begins to understand that the mysterious yogi is the man she has been waiting for." },
       
@@ -729,14 +729,14 @@ export const detailedStories: Record<string, StoryDetails> = {
       { type: "paragraph", text: "Heer pretends to have been bitten by a snake. Saihti persuades the household that only the yogi of the Black Garden can cure her." },
       { type: "paragraph", text: "The plan works. Heer enters the garden. And finally, after months of separation, she stands before Ranjha again." },
       { type: "blockquote", text: "“Yaar nu yaar jadon aan milia…” <br/><span class='block mt-2 text-xs opacity-70'>English rendering: \"When the beloved finally met the beloved…\"</span>" },
-      { type: "paragraph", text: "The reunion is the great emotional and symbolic climax. The river, the forest, the cowherd, the yogi — every stage of their journey has brought them beyond the boundaries that once kept them apart." },
+      { type: "paragraph", text: "The reunion is the great emotional and symbolic climax. The river, the forest, the cowherd, the yogi - every stage of their journey has brought them beyond the boundaries that once kept them apart." },
       
       { type: "heading", text: "The Night Before the Legend" },
       { type: "paragraph", text: "Ranjha helps Saihti escape with Murad." },
       { type: "paragraph", text: "Before the next dawn, Heer and Ranjha also leave together after their long-awaited reunion." },
       { type: "paragraph", text: "And here, the story becomes uncertain. Different traditions take over." },
-      { type: "paragraph", text: "**Version One — The Lovers Return**: Saida and his brother catch the lovers and take them before the just ruler, **Adli Raja**. In this version, the ruler awards Heer to Ranjha. The lovers return to Takht Hazara and live together." },
-      { type: "paragraph", text: "**Version Two — Love Beyond Death**: In another tradition, Heer is threatened with being taken away again. She swallows poison and dies. Ranjha cannot bear her death and collapses over her body. They are buried together, united forever in the same tomb." },
+      { type: "paragraph", text: "**Version One - The Lovers Return**: Saida and his brother catch the lovers and take them before the just ruler, **Adli Raja**. In this version, the ruler awards Heer to Ranjha. The lovers return to Takht Hazara and live together." },
+      { type: "paragraph", text: "**Version Two - Love Beyond Death**: In another tradition, Heer is threatened with being taken away again. She swallows poison and dies. Ranjha cannot bear her death and collapses over her body. They are buried together, united forever in the same tomb." },
       { type: "paragraph", text: "The manuscript itself warns that the ending becomes confused among several versions and that later poetic traditions do not treat the ending as the central climax. The reunion in the Black Garden is the major emotional threshold. The ending is where the legend branches." }
     ],
     annotations: [
@@ -817,10 +817,10 @@ export const detailedStories: Record<string, StoryDetails> = {
       ]
     },
     sources: [
-      "Supplied Heer & Ranjha Manuscript — The primary source for this page. It provides the narrative sequence, character descriptions, emotional arc, Punjabi excerpts and English renderings used throughout the page.",
-      "Punjabi verse excerpts — The short Punjabi excerpts used on this page are selections from the supplied manuscript's transliterated Punjabi passages. Their English renderings are natural renderings of emotional sense.",
-      "Editorial / Source Note — The manuscript's own interpretation and sequence have been retained. It does not provide a definitive historical date for the lovers. The twelve months in the Bara Mah section describe Heer's cycle of longing.",
-      "Ending Note — The manuscript deliberately preserves multiple traditions for the ending rather than selecting one as definitive. The reunion in the Black Garden is treated as the major emotional climax, while the final fate of the lovers remains a branching part of the legend."
+      "Supplied Heer & Ranjha Manuscript - The primary source for this page. It provides the narrative sequence, character descriptions, emotional arc, Punjabi excerpts and English renderings used throughout the page.",
+      "Punjabi verse excerpts - The short Punjabi excerpts used on this page are selections from the supplied manuscript's transliterated Punjabi passages. Their English renderings are natural renderings of emotional sense.",
+      "Editorial / Source Note - The manuscript's own interpretation and sequence have been retained. It does not provide a definitive historical date for the lovers. The twelve months in the Bara Mah section describe Heer's cycle of longing.",
+      "Ending Note - The manuscript deliberately preserves multiple traditions for the ending rather than selecting one as definitive. The reunion in the Black Garden is treated as the major emotional climax, while the final fate of the lovers remains a branching part of the legend."
     ]
   },
   "the-anklet-that-burned-a-city": {
@@ -830,17 +830,17 @@ export const detailedStories: Record<string, StoryDetails> = {
       "This is not a simple story of romantic love.",
       "It begins with a marriage between two prosperous people in the Chola port city of Puhar. Kovalan later leaves Kannagi for Madhavi, a celebrated dancer and courtesan, and eventually returns after losing much of his wealth.",
       "Kannagi forgives him.",
-      "Together they leave Puhar and travel to Madurai, carrying one remaining pair of anklets — the **silambu**.",
+      "Together they leave Puhar and travel to Madurai, carrying one remaining pair of anklets - the **silambu**.",
       "There, a royal goldsmith falsely accuses Kovalan of stealing the Pandyan queen's anklet. King Nedunchezhiyan accepts the accusation without proper investigation and orders Kovalan's execution.",
       "Kannagi enters the royal court carrying the remaining anklet. She breaks it open. Its gems reveal the truth: Kovalan was innocent.",
       "But justice has arrived too late.",
       "What follows transforms Kannagi from a grieving wife into a figure of moral and divine justice. The epic's later Vanchi section and subsequent Tamil and Sri Lankan traditions carry her story beyond the destruction of Madurai and into sacred cultural memory."
     ],
     narrative: [
-      { type: "heading", text: "Puhar — Before the Tragedy" },
+      { type: "heading", text: "Puhar - Before the Tragedy" },
       { type: "paragraph", text: "The story begins in **Puhar**, the great Chola port city." },
       { type: "paragraph", text: "It is a city of wealth, merchants, ships, festivals, music, dance and prosperity." },
-      { type: "paragraph", text: "Here, Kannagi and Kovalan — children of prosperous merchant families — are married." },
+      { type: "paragraph", text: "Here, Kannagi and Kovalan - children of prosperous merchant families - are married." },
       { type: "paragraph", text: "Their marriage begins in happiness." },
       { type: "paragraph", text: "Kannagi is presented as a devoted and dignified young woman." },
       { type: "paragraph", text: "Kovalan is wealthy, handsome and socially privileged." },
@@ -850,7 +850,7 @@ export const detailedStories: Record<string, StoryDetails> = {
       
       { type: "heading", text: "Madhavi Enters Their Life" },
       { type: "paragraph", text: "The turning point comes when Kovalan encounters **Madhavi**, an accomplished dancer and courtesan." },
-      { type: "paragraph", text: "Madhavi is not simply introduced as \"another woman.\" She belongs to the sophisticated artistic world of Puhar — a world of dance, music, performance and beauty." },
+      { type: "paragraph", text: "Madhavi is not simply introduced as \"another woman.\" She belongs to the sophisticated artistic world of Puhar - a world of dance, music, performance and beauty." },
       { type: "paragraph", text: "Kovalan watches her perform and becomes captivated." },
       { type: "paragraph", text: "He begins a relationship with her." },
       { type: "paragraph", text: "Slowly, he moves away from Kannagi." },
@@ -859,7 +859,7 @@ export const detailedStories: Record<string, StoryDetails> = {
       { type: "paragraph", text: "And yet Kannagi does not respond with revenge. She waits. She endures. She remains faithful." },
       { type: "paragraph", text: "This early Kannagi is important because her later transformation begins not with anger, but with **endurance**." },
       
-      { type: "heading", text: "Kovalan & Madhavi — Love That Turns Into Separation" },
+      { type: "heading", text: "Kovalan & Madhavi - Love That Turns Into Separation" },
       { type: "paragraph", text: "Kovalan and Madhavi's relationship eventually becomes troubled." },
       { type: "paragraph", text: "One important episode involves the **Kaanal Vari**, a sequence of songs and poetic expression." },
       { type: "paragraph", text: "Madhavi sings. Kovalan interprets her song through his own emotional state." },
@@ -882,16 +882,16 @@ export const detailedStories: Record<string, StoryDetails> = {
       { type: "paragraph", text: "Everything has changed." },
       { type: "paragraph", text: "At the beginning, Kovalan and Kannagi possessed wealth. Now they are travelling with very little." },
       { type: "paragraph", text: "Their former life is behind them. They are no longer entering a city as prosperous merchants. They are entering it as two people trying to start again." },
-      { type: "paragraph", text: "Kannagi possesses one remaining form of wealth: **her anklets — her silambu**." },
+      { type: "paragraph", text: "Kannagi possesses one remaining form of wealth: **her anklets - her silambu**." },
       
-      { type: "heading", text: "The Silambu — The Anklet at the Heart of the Story" },
+      { type: "heading", text: "The Silambu - The Anklet at the Heart of the Story" },
       { type: "paragraph", text: "The title **Silappatikaram** itself is connected to the silambu, the anklet." },
       { type: "paragraph", text: "The entire epic is therefore centred around an object that initially appears almost ordinary." },
       { type: "paragraph", text: "Kannagi gives Kovalan one of her anklets. But it represents far more than jewellery." },
       { type: "paragraph", text: "It is the last of their wealth, Kannagi's trust, their attempt to rebuild their life, their marriage, and, unknowingly, the evidence that will prove Kovalan innocent." },
       { type: "paragraph", text: "Kovalan takes the anklet to Madurai intending to sell it. Instead, it becomes the object through which an innocent man is accused, a king is exposed and an entire city's moral order is called into question." },
       
-      { type: "heading", text: "Madurai — The City of Justice" },
+      { type: "heading", text: "Madurai - The City of Justice" },
       { type: "paragraph", text: "They reach Madurai." },
       { type: "paragraph", text: "Kovalan enters the city to sell the anklet." },
       { type: "paragraph", text: "And here the story takes its darkest turn." },
@@ -907,7 +907,7 @@ export const detailedStories: Record<string, StoryDetails> = {
       { type: "paragraph", text: "Kovalan is killed. There is no proper opportunity for Kannagi to defend him, no meaningful investigation, and no careful examination of the anklet." },
       { type: "paragraph", text: "The man who came to Madurai hoping to rebuild his life is suddenly dead." },
       { type: "paragraph", text: "The tragedy therefore has two layers: **Personal Injustice** (Kannagi loses her husband) and **Political Injustice** (a king has killed an innocent man through a failure of judgement)." },
-      { type: "paragraph", text: "The source identifies **Aram — moral righteousness and justice** — as one of the central principles shaping the narrative." },
+      { type: "paragraph", text: "The source identifies **Aram - moral righteousness and justice** - as one of the central principles shaping the narrative." },
       
       { type: "heading", text: "Kannagi Hears the News" },
       { type: "paragraph", text: "When Kannagi learns what has happened, her world collapses. She goes to find Kovalan." },
@@ -1017,14 +1017,14 @@ export const detailedStories: Record<string, StoryDetails> = {
         "Kannagi survives as more than a character in an ancient literary narrative. Her story has continued through Tamil and Sri Lankan traditions, later ballads and regional interpretations.",
         "In these traditions, she has sometimes been transformed into a sacred figure or goddess associated with forms such as Kali and other local traditions.",
         "But the most enduring part of her story is the transformation itself: she begins as a wife, becomes a woman who forgives, then a widow, a witness, an advocate, a judge, and finally a cultural and sacred figure.",
-        "Her story survives because it asks a question that is larger than romance: What happens when the people entrusted with justice become the ones who destroy it? And it gives that question a face — Kannagi."
+        "Her story survives because it asks a question that is larger than romance: What happens when the people entrusted with justice become the ones who destroy it? And it gives that question a face - Kannagi."
       ]
     },
     sources: [
-      "*Silappatikaram* — The primary literary tradition underlying the Kannagi and Kovalan narrative presented on this page. The supplied material identifies the silambu, or anklet, as the central object of the epic and follows the narrative through Puhar, Madurai and the later Vanchi section.",
-      "Supplied Research Material on Kannagi & Kovalan — The source used for this webpage provides the narrative structure, character interpretations, literary framing and discussion of later Tamil and Sri Lankan traditions.",
-      "A Note on Historical Framing — This page deliberately presents Kannagi and Kovalan as a literary legend, rather than assigning historical dates or presenting the events as independently documented biography. The supplied material specifically recommends distinguishing the Silappatikaram narrative from later Kannagi traditions and interpretations.",
-      "Editorial Note — The page does not treat Kovalan as an uncomplicated hero, Madhavi as a villain, or Kannagi's story as a simple romance. These distinctions are important to preserving the complexity of the source material."
+      "*Silappatikaram* - The primary literary tradition underlying the Kannagi and Kovalan narrative presented on this page. The supplied material identifies the silambu, or anklet, as the central object of the epic and follows the narrative through Puhar, Madurai and the later Vanchi section.",
+      "Supplied Research Material on Kannagi & Kovalan - The source used for this webpage provides the narrative structure, character interpretations, literary framing and discussion of later Tamil and Sri Lankan traditions.",
+      "A Note on Historical Framing - This page deliberately presents Kannagi and Kovalan as a literary legend, rather than assigning historical dates or presenting the events as independently documented biography. The supplied material specifically recommends distinguishing the Silappatikaram narrative from later Kannagi traditions and interpretations.",
+      "Editorial Note - The page does not treat Kovalan as an uncomplicated hero, Madhavi as a villain, or Kannagi's story as a simple romance. These distinctions are important to preserving the complexity of the source material."
     ]
   },
   "the-sultan-and-the-singer": {
@@ -1036,12 +1036,12 @@ export const detailedStories: Record<string, StoryDetails> = {
       { type: "heading", text: "The Song That Began It All" },
       { type: "paragraph", text: "Baz Bahadur first heard Roopmati's enchanting voice and was captivated by her singing and gentle nature." },
       { type: "paragraph", text: "Their admiration gradually became love." },
-      { type: "paragraph", text: "Though they came from different worlds, they chose to build a life together — a relationship remembered as a love that crossed the boundaries of religion and social status." },
+      { type: "paragraph", text: "Though they came from different worlds, they chose to build a life together - a relationship remembered as a love that crossed the boundaries of religion and social status." },
       
       { type: "heading", text: "The Narmada & The Pavilion" },
       { type: "paragraph", text: "Roopmati had a deep spiritual attachment to the River Narmada and wished to see it each morning." },
       { type: "paragraph", text: "According to tradition, Baz Bahadur built the Rani Roopmati Pavilion on a hilltop overlooking the Narmada valley so she could see the river from its terrace." },
-      { type: "paragraph", text: "The pavilion became more than a monument. It became a symbol of his devotion to her — and her devotion to the river." },
+      { type: "paragraph", text: "The pavilion became more than a monument. It became a symbol of his devotion to her - and her devotion to the river." },
       
       { type: "heading", text: "Rewa Kund" },
       { type: "paragraph", text: "Near Baz Bahadur's Palace lies Rewa Kund, a reservoir associated with the Narmada." },
@@ -1092,7 +1092,7 @@ export const detailedStories: Record<string, StoryDetails> = {
     whereItHappened: {
       title: "Mandu, Malwa",
       subtitle: "Mandu, Madhya Pradesh",
-      context: "Mandu forms the setting for Baz Bahadur and Roopmati's story — a world of palaces, monuments and reservoirs.",
+      context: "Mandu forms the setting for Baz Bahadur and Roopmati's story - a world of palaces, monuments and reservoirs.",
       otherPlaces: [
         { name: "Mandu", description: "The historic city where Baz Bahadur and Roopmati's story unfolded." },
         { name: "Rani Roopmati Pavilion", description: "A hilltop monument overlooking the Narmada valley, built so Roopmati could see the river." },
@@ -1108,9 +1108,9 @@ export const detailedStories: Record<string, StoryDetails> = {
       ]
     },
     sources: [
-      "Folk traditions of the Malwa region — The primary source for the love story of Baz Bahadur and Rani Roopmati, transmitted through songs and oral histories.",
-      "The monuments of Mandu — Physical structures (the pavilion, Rewa Kund, and Baz Bahadur's Palace) that serve as historical anchor points for the legend.",
-      "Historical records of the Mughal annexation of Malwa — Chronicling Baz Bahadur's reign, defeat, and the fall of Mandu."
+      "Folk traditions of the Malwa region - The primary source for the love story of Baz Bahadur and Rani Roopmati, transmitted through songs and oral histories.",
+      "The monuments of Mandu - Physical structures (the pavilion, Rewa Kund, and Baz Bahadur's Palace) that serve as historical anchor points for the legend.",
+      "Historical records of the Mughal annexation of Malwa - Chronicling Baz Bahadur's reign, defeat, and the fall of Mandu."
     ]
   },
   "the-silence-that-saved-a-kingdom": {
@@ -1121,7 +1121,7 @@ export const detailedStories: Record<string, StoryDetails> = {
     narrative: [
       { type: "heading", text: "The Troubled Ahom Kingdom" },
       { type: "paragraph", text: "By the late 17th century, the Ahom Kingdom was facing political instability. Powerful nobles controlled the young king Sulikpha (Lora Roja), while royal princes were being mutilated to prevent them from claiming the throne." },
-      { type: "paragraph", text: "One prince remained a major threat — Gadapani, later known as Swargadeo Gadadhar Singha." },
+      { type: "paragraph", text: "One prince remained a major threat - Gadapani, later known as Swargadeo Gadadhar Singha." },
       
       { type: "heading", text: "Joymoti & Gadapani" },
       { type: "paragraph", text: "Joymoti Konwari was intelligent, courageous and deeply devoted to her husband and homeland." },
@@ -1136,7 +1136,7 @@ export const detailedStories: Record<string, StoryDetails> = {
       { type: "heading", text: "Fourteen Days of Courage" },
       { type: "paragraph", text: "For fourteen days and nights, Joymoti endured suffering without revealing where Gadapani was." },
       { type: "paragraph", text: "Her silence gave him the time he needed to survive." },
-      { type: "paragraph", text: "Her courage was not only for her husband — she believed she was protecting the future of the Ahom Kingdom." },
+      { type: "paragraph", text: "Her courage was not only for her husband - she believed she was protecting the future of the Ahom Kingdom." },
       
       { type: "heading", text: "The Sacrifice" },
       { type: "paragraph", text: "According to the legend, Gadapani secretly returned to see Joymoti and begged her to save herself." },
@@ -1212,9 +1212,9 @@ export const detailedStories: Record<string, StoryDetails> = {
       ]
     },
     sources: [
-      "Ahom Buranjis — Historical chronicles of the Ahom Kingdom recording the reign of Gadadhar Singha and the events leading to his ascension.",
-      "Oral and literary history of Assam — Preserving the details of Joymoti's interrogation, torture, and her status as a symbol of Assamese courage.",
-      "Jyoti Prasad Agarwala's *Joymoti* (1935) — The landmark film that adapted her story for modern cinema and solidified her place in visual cultural memory."
+      "Ahom Buranjis - Historical chronicles of the Ahom Kingdom recording the reign of Gadadhar Singha and the events leading to his ascension.",
+      "Oral and literary history of Assam - Preserving the details of Joymoti's interrogation, torture, and her status as a symbol of Assamese courage.",
+      "Jyoti Prasad Agarwala's *Joymoti* (1935) - The landmark film that adapted her story for modern cinema and solidified her place in visual cultural memory."
     ]
   }
 };

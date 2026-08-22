@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+﻿import { Link } from "@tanstack/react-router";
 import { cn } from "@/lib/utils";
 import type { Story } from "@/data/stories";
 import { TruthBadge } from "./TruthBadge";

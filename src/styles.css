@@ -404,3 +404,16 @@
   border-bottom-right-radius: 2px;
 }
 
+@keyframes dynamicFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-dynamic-float {
+  animation: dynamicFloat 5s ease-in-out infinite;
+}
+

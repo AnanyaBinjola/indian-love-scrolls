@@ -1,4 +1,4 @@
-import { stories } from "@/data/stories";
+﻿import { stories } from "@/data/stories";
 import { StoryCard } from "./StoryCard";
 
 export function StoryGrid({ limit }: { limit?: number }) {

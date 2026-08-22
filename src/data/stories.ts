@@ -1,4 +1,4 @@
-export type TruthKey = "documented" | "folk" | "legend" | "mixed" | "contested";
+﻿export type TruthKey = "documented" | "folk" | "legend" | "mixed" | "contested";
 
 export const truthRatings: Record<TruthKey, { label: string; short: string; tone: string }> = {
   documented: {
@@ -116,7 +116,7 @@ const rawStories: Story[] = [
     motif: "jali",
     image: "/images/stories/the-empress-behind-the-curtain.jpg",
     hook:
-      "She was his twentieth wife — and the only one whose face appeared on Mughal coins.",
+      "She was his twentieth wife - and the only one whose face appeared on Mughal coins.",
     coordinates: { lat: 31.5892, lng: 74.3031, place: "Lahore / Punjab" },
     mapPin: { x: 34, y: 22, place: "Lahore / Punjab" },
   },
@@ -146,7 +146,7 @@ const rawStories: Story[] = [
     motif: "madhubani",
     image: "/images/stories/the-silence-that-saved-a-kingdom.jpg",
     hook:
-      "Fourteen days of torture. She never said a word — and a dynasty survived because of it.",
+      "Fourteen days of torture. She never said a word - and a dynasty survived because of it.",
     coordinates: { lat: 26.9826, lng: 94.6426, place: "Sivasagar, Assam" },
     mapPin: { x: 78, y: 34, place: "Sivasagar" },
   },
@@ -189,7 +189,7 @@ const rawStories: Story[] = [
     motif: "floral",
     image: "/images/stories/married-to-the-divine.jpeg",
     hook:
-      "A princess who said her real husband was Krishna — and never let her royal family talk her out of it.",
+      "A princess who said her real husband was Krishna - and never let her royal family talk her out of it.",
     coordinates: { lat: 25.35, lng: 73.85, place: "Mewar, Rajasthan" },
     mapPin: { x: 26, y: 40, place: "Mewar" },
   },
@@ -210,9 +210,9 @@ const rawStories: Story[] = [
 ];
 
 import { detailedStories } from "./detailedStoriesContent";
-export const stories: Story[] = rawStories.map(s => ({
-  ...s,
-  details: detailedStories[s.slug]
-}));
+export const stories: Story[] = rawStories.map(s => {
+  const details = detailedStories[s.slug];
+  return details ? { ...s, details } : { ...s };
+});
 
 export const getStory = (slug: string) => stories.find((s) => s.slug === slug);

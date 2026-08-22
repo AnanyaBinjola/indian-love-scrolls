@@ -1,4 +1,4 @@
-import { PatternBackground } from "./PatternBackground";
+﻿import { PatternBackground } from "./PatternBackground";
 
 export function Footer() {
   return (

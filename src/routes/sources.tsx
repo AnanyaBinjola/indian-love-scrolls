@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/heritage/PageHeader";
 import { PatternBackground } from "@/components/heritage/PatternBackground";
 import { stories } from "@/data/stories";
@@ -7,13 +7,13 @@ import { TruthBadge } from "@/components/heritage/TruthBadge";
 export const Route = createFileRoute("/sources")({
   head: () => ({
     meta: [
-      { title: "Sources & Further Reading — Historical Stories of Love" },
+      { title: "Sources & Further Reading - Historical Stories of Love" },
       {
         name: "description",
         content:
           "Citations and further reading for the eight Indian love stories in this project. Placeholder entries remain until each source is consulted.",
       },
-      { property: "og:title", content: "Sources & Further Reading — Historical Stories of Love" },
+      { property: "og:title", content: "Sources & Further Reading - Historical Stories of Love" },
       {
         property: "og:description",
         content: "Citations and further reading for the eight stories in this project.",

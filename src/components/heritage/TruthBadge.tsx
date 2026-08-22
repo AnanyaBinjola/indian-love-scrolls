@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+﻿import { cn } from "@/lib/utils";
 import { truthRatings, type TruthKey } from "@/data/stories";
 
 const dotClass: Record<string, string> = {
