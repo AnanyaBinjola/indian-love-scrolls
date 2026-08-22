@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { PatternBackground } from "@/components/heritage/PatternBackground";
 import {
   DecorativeBorder,
@@ -14,17 +14,17 @@ import { StoryGrid } from "@/components/heritage/StoryGrid";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Historical Stories of Love — Eight Indian Love Stories" },
+      { title: "Historical Stories of Love - Eight Indian Love Stories" },
       {
         name: "description",
         content:
-          "Eight love stories across Indian history and legend, from Agra to Assam to Tamil Nadu — with the history hiding underneath each one.",
+          "Eight love stories across Indian history and legend, from Agra to Assam to Tamil Nadu - with the history hiding underneath each one.",
       },
-      { property: "og:title", content: "Historical Stories of Love — Eight Indian Love Stories" },
+      { property: "og:title", content: "Historical Stories of Love - Eight Indian Love Stories" },
       {
         property: "og:description",
         content:
-          "Eight stories. Eight kinds of love. One India — and an honest account of what is history and what is legend.",
+          "Eight stories. Eight kinds of love. One India - and an honest account of what is history and what is legend.",
       },
     ],
   }),
@@ -53,7 +53,7 @@ function Home() {
             {/* Increased Font Size Description with Stagger 3 (increased by ~4px) */}
             <p className="mx-auto mt-7 max-w-2xl text-xl leading-relaxed text-parchment/90 text-shadow-heritage sm:text-[1.38rem] animate-royal-stagger-3">
               From a Sultan who built a palace for a shepherdess to a princess who died without
-              saying a word — these are the stories India has been telling itself for centuries,
+              saying a word - these are the stories India has been telling itself for centuries,
               and the history hiding underneath them.
             </p>
             
@@ -89,8 +89,8 @@ function Home() {
             after they happened. Some are still argued about today.
           </p>
           <p className="mt-6 text-xl md:text-[1.35rem] leading-[1.8] text-charcoal/85">
-            This project traces eight of India's most enduring love stories — from Agra to Assam to
-            Tamil Nadu — and is honest about where each one sits between fact and legend.
+            This project traces eight of India's most enduring love stories - from Agra to Assam to
+            Tamil Nadu - and is honest about where each one sits between fact and legend.
           </p>
         </div>
       </section>
@@ -142,20 +142,25 @@ function Home() {
             <SectionHeading align="left" eyebrow="Selection" title="Why These Eight" />
             <p className="mt-6 text-xl md:text-[1.35rem] leading-[1.8] text-charcoal/85">
               We didn't just pick the most famous names. We picked stories that show love wearing
-              different faces across Indian history — political partnership, quiet sacrifice,
+              different faces across Indian history - political partnership, quiet sacrifice,
               devotion to the divine, defiance of family and caste, and the blurry space where
               legend and memory become almost impossible to separate.
             </p>
             <p className="mt-5 text-xl md:text-[1.35rem] leading-[1.8] text-charcoal/85">
-              We also went looking beyond the usual Mughal-and-Rajasthan shortlist — which is how a
+              We also went looking beyond the usual Mughal-and-Rajasthan shortlist - which is how a
               17th-century Assamese princess and a 2,000-year-old Tamil epic ended up on the same
               page as the Taj Mahal.
             </p>
           </div>
           <div className="hidden shrink-0 items-center justify-center lg:flex">
-            <div className="relative flex h-56 w-56 items-center justify-center border border-gold/40">
-              <PatternBackground motif="jali" opacity={0.24} />
-              <LotusMark className="relative h-16 w-24 text-gold" />
+            <div className="relative overflow-hidden h-72 w-80 border-2 border-gold/45 shadow-2xl bg-walnut p-1.5 rounded-none">
+              <div className="absolute inset-1.5 border border-gold/25 pointer-events-none z-30" />
+              <img
+                src="/images/why-these-eight.jpg"
+                alt="Why These Eight Stories"
+                className="h-full w-full object-cover relative z-10"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-oxblood/40 via-transparent to-transparent z-20 pointer-events-none" />
             </div>
           </div>
         </div>

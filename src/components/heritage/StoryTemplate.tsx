@@ -1,7 +1,7 @@
-import { Link } from "@tanstack/react-router";
+﻿import { Link } from "@tanstack/react-router";
 import { stories, truthRatings, type Story } from "@/data/stories";
 import { PatternBackground } from "./PatternBackground";
-import { DecorativeBorder, OrnamentalDivider, LotusMark, VineDivider } from "./Ornaments";
+import { DecorativeBorder, OrnamentalDivider, LotusMark, VineDivider, CornerFlourishes } from "./Ornaments";
 import { TruthBadge } from "./TruthBadge";
 import { AnnotationNote } from "./AnnotationNote";
 import { Timeline, type TimelineItem } from "./Timeline";
@@ -18,11 +18,22 @@ const parseMarkdown = (text: string) => {
 };
 
 const placeholderTimeline = (story: Story): TimelineItem[] => [
-  { year: "[Year]", label: "Opening event", note: "Placeholder — to be sourced." },
-  { year: "[Year]", label: "The meeting", note: "Placeholder — to be sourced." },
+  { year: "[Year]", label: "Opening event", note: "Placeholder - to be sourced." },
+  { year: "[Year]", label: "The meeting", note: "Placeholder - to be sourced." },
   { year: "[Year]", label: "The turning point" },
   { year: "[Year]", label: `Legacy of ${story.title.replace(/^The /, "")}` },
 ];
+
+const locationImages: Record<string, string> = {
+  "the-taj-mahal": "/images/places/agra-taj.jpg",
+  "the-empress-behind-the-curtain": "/images/places/agra-lahore.jpg",
+  "the-sultan-and-the-singer": "/images/places/mandu.jpg",
+  "the-silence-that-saved-a-kingdom": "/images/places/assam.jpg",
+  "the-ballad-punjab-still-sings": "/images/places/punjab.jpg",
+  "the-anklet-that-burned-a-city": "/images/places/madurai.jpg",
+  "married-to-the-divine": "/images/places/mewar.jpg",
+  "the-legend-of-chittorgarh": "/images/places/chittorgarh.jpg",
+};
 
 export function StoryTemplate({ story }: { story: Story }) {
   const index = stories.findIndex((s) => s.slug === story.slug);
@@ -31,33 +42,38 @@ export function StoryTemplate({ story }: { story: Story }) {
 
   return (
     <article>
-      {/* ---------- Story hero ---------- */}
-      <header className="relative overflow-hidden bg-oxblood text-parchment py-14 sm:py-20 ink-grain">
-        <PatternBackground motif={story.motif} color="ivory" opacity={0.18} />
-        <div className="relative mx-auto max-w-5xl px-6 text-center select-none">
-          <p className="eyebrow text-sand/75 tracking-[0.25em] animate-royal-stagger-1">
-            Chapter {story.number} · {story.era}
-          </p>
-          <h1 className="mx-auto mt-4 max-w-3xl text-balance text-4xl leading-tight text-parchment font-display sm:text-6xl text-shadow-heritage animate-royal-stagger-2">
-            {story.title}
-          </h1>
-          <p className="mt-4 font-display text-base tracking-[0.2em] text-sand/90 animate-royal-stagger-3">
-            {story.figures}
-          </p>
-          <div className="mt-5 flex flex-wrap items-center justify-center gap-3 animate-royal-stagger-3">
-            <span className="meta-label text-sand/70">{story.region}</span>
-            <TruthBadge truth={story.truth} full tone="dark" />
-          </div>
+      {/* ---------- Story hero (Full bleed background, matching Homepage Hero) ---------- */}
+      <header
+        className="relative overflow-hidden bg-cover bg-center bg-no-repeat text-parchment ink-grain py-24 sm:py-32"
+        style={{
+          backgroundImage: `linear-gradient(to bottom, rgba(42, 22, 18, 0.42), rgba(42, 22, 18, 0.48)), url('${story.image}')`
+        }}
+      >
+        <div className="relative mx-auto max-w-6xl px-6">
+          <div className="relative mx-auto max-w-3xl text-center select-none">
+            {/* Eyebrow with Stagger 1 */}
+            <div className="flex items-center justify-center gap-3 animate-royal-stagger-1">
+              <LotusMark className="text-gold/80" />
+              <p className="eyebrow text-parchment/90 tracking-[0.25em]">
+                Chapter {story.number} · {story.era}
+              </p>
+              <LotusMark className="text-gold/80" />
+            </div>
 
-          {/* Arched palace window framing (matching Image 3) with Stagger 4 */}
-          <div className="relative mx-auto mt-12 max-w-sm overflow-hidden border-t-[3px] border-x-[3px] border-gold/45 shadow-2xl rounded-t-[180px] animate-royal-stagger-4">
-            <div className="relative aspect-[3/4] w-full bg-walnut">
-              <img
-                src={story.image}
-                alt={story.title}
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-oxblood/85 via-transparent to-transparent" />
+            {/* Main Title with Stagger 2 */}
+            <h1 className="mt-7 text-balance text-4xl leading-[1.15] text-parchment/95 text-shadow-heritage font-display sm:text-6xl animate-royal-stagger-2">
+              {story.title}
+            </h1>
+
+            {/* Subtitle / Characters with Stagger 3 */}
+            <p className="mx-auto mt-6 max-w-2xl font-display text-lg tracking-[0.2em] text-sand/90 text-shadow-heritage sm:text-xl animate-royal-stagger-3">
+              {story.figures}
+            </p>
+
+            {/* Metadata (Region & Truth rating) with Stagger 4 */}
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3 animate-royal-stagger-4">
+              <span className="meta-label text-sand/80 text-[1.05rem]">{story.region}</span>
+              <TruthBadge truth={story.truth} full tone="dark" />
             </div>
           </div>
         </div>
@@ -81,7 +97,7 @@ export function StoryTemplate({ story }: { story: Story }) {
                   This story is rated <strong className="font-normal text-oxblood">
                     {truthRatings[story.truth].label}
                   </strong>
-                  . Placeholder note — a short summary of what is documented and what was added by
+                  . Placeholder note - a short summary of what is documented and what was added by
                   later storytellers will appear here.
                 </p>
               )}
@@ -91,94 +107,120 @@ export function StoryTemplate({ story }: { story: Story }) {
       </section>
 
       {/* ---------- Narrative + annotation sidebar ---------- */}
-      <section className="relative bg-parchment paper-grain">
-        <PatternBackground motif="floral" opacity={0.20} />
-        <div className="relative mx-auto grid max-w-6xl gap-12 px-6 py-16 lg:grid-cols-[minmax(0,7fr)_minmax(0,3fr)] lg:gap-16 lg:py-24">
-          <div className="max-w-[68ch]">
-            {story.details ? (
-              story.details.narrative.map((item, idx) => {
-                const isFirstParagraph =
-                  item.type === "paragraph" &&
-                  story.details!.narrative.findIndex((n) => n.type === "paragraph") === idx;
+      <section className="relative bg-parchment py-12 sm:py-16 md:py-20 paper-grain">
+        <PatternBackground motif="floral" opacity={0.14} />
+        
+        <div className="relative mx-auto max-w-6xl px-6">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,7fr)_minmax(0,3.3fr)] lg:gap-14">
+            
+            {/* Left: Beautifully framed Manuscript page container for the narrative text */}
+            <div 
+              className="relative border border-gold/30 bg-card p-6 sm:p-10 md:p-12 shadow-lg rounded-none overflow-hidden"
+              style={{ boxShadow: "var(--shadow-manuscript)" }}
+            >
+              {/* Double inner border lines */}
+              <div className="absolute inset-2 border border-gold/15 pointer-events-none" />
+              <div className="absolute inset-4 border border-gold/10 pointer-events-none" />
+              
+              {/* Always visible premium corner flourishes */}
+              <CornerFlourishes className="opacity-60 pointer-events-none" />
 
-                if (item.type === "heading") {
-                  return (
-                    <h2 key={idx} className={cn("text-2xl text-oxblood font-display mt-10 mb-5", idx > 0 && "mt-12")}>
-                      {item.text}
-                    </h2>
-                  );
-                } else if (item.type === "blockquote") {
-                  return (
-                    <blockquote
-                      key={idx}
-                      className="my-10 border-l-2 border-gold/70 pl-6 font-display text-xl italic leading-relaxed text-oxblood"
-                      dangerouslySetInnerHTML={{ __html: `“${parseMarkdown(item.text)}”` }}
-                    />
-                  );
-                } else if (item.type === "divider") {
-                  return (
-                    <VineDivider key={idx} className="my-10" />
-                  );
-                } else {
-                  return (
-                    <p
-                      key={idx}
-                      className={cn(
-                        "text-[1.25rem] leading-[1.9] text-charcoal/90 mt-5",
-                        isFirstParagraph && "drop-cap text-[1.28rem]"
-                      )}
-                      dangerouslySetInnerHTML={{ __html: parseMarkdown(item.text) }}
-                    />
-                  );
-                }
-              })
-            ) : (
-              <>
-                <p className="drop-cap text-[1.18rem] leading-[1.9] text-charcoal/90">
-                  Placeholder narrative. This is where the researched account of {story.title} will be
-                  written, in the same typographic voice used across all eight chapters — long-form
-                  serif text, generous line-height and wide margins, designed to be read slowly.
-                </p>
-                <p className="mt-6 text-[1.18rem] leading-[1.9] text-charcoal/90">
-                  Further placeholder paragraphs sit here. No historical claims have been written yet;
-                  the final text will cite archival and academic sources, and any detail that comes
-                  from folklore rather than record will be marked in the margin alongside it.
-                </p>
-                <VineDivider className="my-10" />
-                <h2 className="text-2xl text-oxblood">A section heading</h2>
-                <p className="mt-4 text-[1.18rem] leading-[1.9] text-charcoal/90">
-                  Placeholder body copy for the second movement of the story. Sub-sections use the same
-                  rhythm: heading, body, occasional pull-quote, gold divider.
-                </p>
-                <blockquote className="my-10 border-l-2 border-gold/70 pl-6 font-display text-xl italic leading-relaxed text-oxblood">
-                  “{story.hook}”
-                </blockquote>
-                <p className="text-[1.18rem] leading-[1.9] text-charcoal/90">
-                  Closing placeholder paragraph. The narrative ends by handing the reader to the
-                  timeline, the location and the legacy sections below.
-                </p>
-              </>
-            )}
+              <div className="relative z-10 max-w-[62ch] mx-auto select-text">
+                {story.details ? (
+                  story.details.narrative.map((item, idx) => {
+                    const isFirstParagraph =
+                      item.type === "paragraph" &&
+                      story.details!.narrative.findIndex((n) => n.type === "paragraph") === idx;
 
-            {/* Mobile annotations follow the narrative */}
-            <div className="mt-10 space-y-6 lg:hidden">
-              <Annotations story={story} />
+                    if (item.type === "heading") {
+                      return (
+                        <h2 key={idx} className={cn("text-2xl md:text-3xl text-oxblood font-display mt-8 mb-5 border-b border-gold/15 pb-2", idx > 0 && "mt-12")}>
+                          {item.text}
+                        </h2>
+                      );
+                    } else if (item.type === "blockquote") {
+                      return (
+                        <blockquote
+                          key={idx}
+                          className="my-8 border-l-[3px] border-gold/60 pl-6 font-display text-xl md:text-2xl italic leading-relaxed text-oxblood bg-gold/[0.03] py-4 pr-4"
+                          dangerouslySetInnerHTML={{ __html: `“${parseMarkdown(item.text)}”` }}
+                        />
+                      );
+                    } else if (item.type === "divider") {
+                      return (
+                        <VineDivider key={idx} className="my-8" />
+                      );
+                    } else {
+                      return (
+                        <p
+                          key={idx}
+                          className={cn(
+                            "text-[1.18rem] sm:text-[1.25rem] leading-[1.85] text-charcoal/90 mt-5 font-body",
+                            isFirstParagraph && "drop-cap text-[1.28rem]"
+                          )}
+                          dangerouslySetInnerHTML={{ __html: parseMarkdown(item.text) }}
+                        />
+                      );
+                    }
+                  })
+                ) : (
+                  <>
+                    <p className="drop-cap text-[1.28rem] leading-[1.85] text-charcoal/90 font-body">
+                      Placeholder narrative. This is where the researched account of {story.title} will be
+                      written, in the same typographic voice used across all eight chapters - long-form
+                      serif text, generous line-height and wide margins, designed to be read slowly.
+                    </p>
+                    <p className="mt-5 text-[1.18rem] sm:text-[1.25rem] leading-[1.85] text-charcoal/90 font-body">
+                      Further placeholder paragraphs sit here. No historical claims have been written yet;
+                      the final text will cite archival and academic sources, and any detail that comes
+                      from folklore rather than record will be marked in the margin alongside it.
+                    </p>
+                    <VineDivider className="my-8" />
+                    <h2 className="text-2xl md:text-3xl text-oxblood font-display mt-8 mb-5 border-b border-gold/15 pb-2">A section heading</h2>
+                    <p className="mt-4 text-[1.18rem] sm:text-[1.25rem] leading-[1.85] text-charcoal/90 font-body">
+                      Placeholder body copy for the second movement of the story. Sub-sections use the same
+                      rhythm: heading, body, occasional pull-quote, gold divider.
+                    </p>
+                    <blockquote className="my-8 border-l-[3px] border-gold/60 pl-6 font-display text-xl md:text-2xl italic leading-relaxed text-oxblood bg-gold/[0.03] py-4 pr-4">
+                      “{story.hook}”
+                    </blockquote>
+                    <p className="mt-5 text-[1.18rem] sm:text-[1.25rem] leading-[1.85] text-charcoal/90 font-body">
+                      Closing placeholder paragraph. The narrative ends by handing the reader to the
+                      timeline, the location and the legacy sections below.
+                    </p>
+                  </>
+                )}
+
+                {/* Mobile annotations follow the narrative */}
+                <div className="mt-12 space-y-6 lg:hidden border-t border-gold/20 pt-8">
+                  <div className="flex items-center gap-2 mb-4">
+                    <LotusMark className="text-gold h-4 w-6" />
+                    <p className="meta-label text-oxblood/85 tracking-widest text-xs uppercase font-semibold">Marginal Commentary</p>
+                  </div>
+                  <Annotations story={story} />
+                </div>
+              </div>
             </div>
+
+            {/* Right: Beautiful, sticky margin annotations sidebar (desk only) */}
+            <aside className="hidden lg:block relative">
+              <div className="sticky top-28 space-y-6">
+                <div className="flex items-center gap-2 border-b border-gold/25 pb-3">
+                  <LotusMark className="text-gold h-4 w-6" />
+                  <p className="meta-label text-oxblood/80 tracking-widest text-xs uppercase font-medium">Marginal Commentary</p>
+                </div>
+                <Annotations story={story} />
+              </div>
+            </aside>
+
           </div>
-
-          <aside className="hidden lg:block">
-            <div className="sticky top-28 space-y-7 border-l border-gold/30 pl-6">
-              <p className="meta-label text-charcoal/50">Margin notes</p>
-              <Annotations story={story} />
-            </div>
-          </aside>
         </div>
       </section>
 
-      {/* ---------- Timeline ---------- */}
-      <section className="relative border-t border-gold/40 bg-card paper-grain">
-        <PatternBackground motif="madhubani" opacity={0.18} />
-        <div className="relative mx-auto max-w-5xl px-6 py-16 lg:py-20">
+      {/* ---------- Timeline (Unboxed floating layout) ---------- */}
+      <section className="relative bg-parchment paper-grain py-16 lg:py-20 border-t border-gold/30">
+        <PatternBackground motif="madhubani" opacity={0.16} />
+        <div className="relative mx-auto max-w-5xl px-6">
           <SectionHeading
             eyebrow="Chronology"
             title={story.truth === "documented" ? "Timeline" : "Story Beats"}
@@ -198,6 +240,7 @@ export function StoryTemplate({ story }: { story: Story }) {
             className="mt-10"
             place={story.details?.whereItHappened?.subtitle || story.region}
             context={story.details?.whereItHappened?.context || "Placeholder context about this location and what remains there today."}
+            imageUrl={locationImages[story.slug]}
           />
           {story.details?.whereItHappened?.otherPlaces && (
             <div className="mx-auto mt-10 max-w-2xl border-t border-gold/30 pt-8">
@@ -227,7 +270,7 @@ export function StoryTemplate({ story }: { story: Story }) {
               ))
             ) : (
               <p>
-                Placeholder — monuments, songs, festivals, films and scholarship connected to this story will be summarised here.
+                Placeholder - monuments, songs, festivals, films and scholarship connected to this story will be summarised here.
               </p>
             )}
           </div>
@@ -248,7 +291,7 @@ export function StoryTemplate({ story }: { story: Story }) {
             ) : (
               [1, 2, 3].map((i) => (
                 <li key={i} className="border-b border-gold/20 pb-4">
-                  [Source {i} placeholder — citation to be added. No sources have been fabricated.]
+                  [Source {i} placeholder - citation to be added. No sources have been fabricated.]
                 </li>
               ))
             )}
